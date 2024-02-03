@@ -1,0 +1,171 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif; /* Add a default font */
+    background-image: url('./images/pexels-pixabay-531880.jpg'); /* Replace with your image path */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 900px;
+    top: 250px;
+    gap: 10px;
+    width: 400px; /* Set a fixed width */
+    height: 250px;
+    padding: 20px; /* Add some padding */
+    border-radius: 5px; /* Round the corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: grey; /* Change the background color */
+
+}
+
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+}
+
+#loginForm input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+#loginForm input[type="submit"]:hover {
+    background-color: #0056b3; /* Darken the button when hovered */
+}
+
+#heading {
+    position: relative;
+    top: -150px;
+    left: 360px;
+    width: 380px;
+    text-align: center;
+    height: 70px;
+    background-color: grey;
+    border: 3px solid grey; /* Add a border */
+    border-radius: 5px;
+
+}
+
+#socialmedia {
+    height: 70px;
+    width: 400px;
+    background-color: white;
+    display: flex; /* Add this line */
+    justify-content: space-around; /* Add this line */
+    align-items: center; /* Add this line */
+}
+
+.icon {
+    color: white; /* Set the color of the icons */
+    font-size: 24px; /* Set the size of the icons */
+}
+
+#google{
+    background-image: url('./images/google.avif'); /* Replace with your image path */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    height: 50px;
+    width: 50px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+#linkedin{
+    background-image: url('./images/linkedin.jpg'); /* Replace with your image path */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    height: 50px;
+    width: 50px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+#indeed{
+    background-image: url('./images/indeed.png'); /* Replace with your image path */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    height: 50px;
+    width: 50px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+
+#menu ul {
+
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#menu li {
+    float: left;
+    width: 140px;
+}
+
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+#menu li.right {
+    margin-left: auto;
+}
+
+#menu li a:hover {
+    background-color: #111;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 1530px;
+}
+
+#leftImage {
+    background-image: url('./images/login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    height: 100px; /* Adjust as needed */
+    width: 1530px;
+    height: 600px;
+    background-color: #111;
+}

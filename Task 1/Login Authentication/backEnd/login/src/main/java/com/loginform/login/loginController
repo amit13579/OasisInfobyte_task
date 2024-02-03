@@ -1,0 +1,24 @@
+package com.loginform.login;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class LoginController {
+
+    @GetMapping("/")
+    public String showLoginForm() {
+        return "index";
+    }
+
+    @PostMapping("/login")
+    public ModelAndView handleLogin(@RequestParam String email, @RequestParam String password) {
+        // Here you can process the email and password, for example, validate them and check them against your database.
+
+        // If everything is okay, you can redirect the user to another page.
+        return new ModelAndView("redirect:/success");
+    }
+}

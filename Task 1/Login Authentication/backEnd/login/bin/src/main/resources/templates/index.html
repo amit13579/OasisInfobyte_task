@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Explore</a></li>
+            <li class="right"><a href="#">Register/SignUp</a></li>
+        </ul>
+    </div>
+
+    <div id="leftImage"> </div>
+    <div id="heading">
+    <h1 >Login Authentication</h1> 
+    </div>
+    <form id="loginForm" action="@{/login}" method="post">
+        <input type="text" id="email" placeholder="Email ID/Username">
+        <input type="password" id="password" placeholder="Password">
+        <input type="submit" value="Login">
+        <div> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ------------------- or continue with -------------------</div>
+        <div id="socialmedia">
+            <a href="https://www.google.co.uk/" target="_blank"><div class="icon" id="google"></div></a> <!-- Google Icon -->
+            <a href="https://in.linkedin.com/" target="_blank"><div class="icon" id="linkedin"></div></a> <!-- LinkedIn Icon -->
+            <a href="https://in.indeed.com/" target="_blank"><div class="icon" id="indeed"></div></a> <!-- Indeed Icon -->    
+        </div>
+        
+    </form>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
