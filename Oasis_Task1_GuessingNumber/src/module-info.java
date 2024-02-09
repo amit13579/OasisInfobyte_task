@@ -4,5 +4,5 @@
 /**
  * 
  */
-module CodeAlpha {
+module GuessingNumber {
 }

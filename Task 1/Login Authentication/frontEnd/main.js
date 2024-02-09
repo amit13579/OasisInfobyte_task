@@ -23,9 +23,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         return;
     }
 
-    console.log('Email:', email);
-    console.log('Password:', password);
-
     // Send these values to your backend
     fetch('/login', {
         method: 'POST',
@@ -40,9 +37,15 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         if (response.ok) {
             window.location.href = "success.html"; // Redirect to success page
         } else {
-            throw new Error('Error: ' + response.statusText);
+            // If the server responds with an error status, try to get the error message from the response body
+            return response.json().then(body => {
+                throw new Error(body.error || 'An error occurred');
+            });
         }
     }).catch(error => {
+        // Log the error to the console for debugging
         console.error('Error:', error);
+        // Show an alert with the error message
+        alert(error.message);
     });
 });
