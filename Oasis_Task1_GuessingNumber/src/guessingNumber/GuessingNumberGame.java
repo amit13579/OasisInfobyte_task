@@ -66,8 +66,7 @@ public class GuessingNumberGame {
     }
 
     public static int calculateScore(int attempts, int round, int maxAttempts) {
-        // You can customize the scoring logic based on your preferences
-        // For example, more points for fewer attempts and higher round
+        
         return (10 - attempts) * round + (5 * maxAttempts); // Added maxAttempts to scoring logic
     }
 }
