@@ -1,0 +1,52 @@
+.container{
+  margin-top: auto;
+  
+ }
+ .card h1{
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   margin-top: 1%;
+   border: 1px solid black;
+   padding: 20px;
+ }
+ mat-form-field {
+   width: 100%;
+   display: inline-block;
+   margin-right: 20px;
+ }
+ .row{
+   display: flex;
+   justify-content: center;
+   margin-top: 15px;
+  
+ }
+ .col{
+   margin: 0 10px;
+ }
+ 
+ .mx-2 {
+   margin: 0 0.5rem;
+ }
+ button[type="submit"],
+ button[type="reset"] {
+   margin: 0 5px;
+ }
+ .btn-lg {
+   font-size: 1.5em;
+   padding: 10px 20px;
+   line-height: 1.5;
+ }
+ .form {
+   font-size: 18px;
+   margin-bottom: 20px;
+ }
+ .card{
+   border: 10px solid rgb(64, 170, 219);
+   padding: 50px;
+ 
+   width: 500px;
+   margin: 5px;   
+ }
+ 
+ 

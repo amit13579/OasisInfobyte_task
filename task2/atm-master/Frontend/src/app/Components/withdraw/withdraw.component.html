@@ -1,0 +1,60 @@
+<html>
+    <head>
+   
+        <title>withdraw</title>
+        <h1>Withdraw Money</h1>
+        <style>
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+          }
+          input {
+            width: 450px;
+            height: 50px;
+            margin-bottom: 20px;
+          }
+          button {
+            width: 200px;
+            height: 80px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 20px;
+          }
+          
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        </style>
+    </head>
+    <h1>Withdraw Money</h1>
+
+    <form (ngSubmit)="onSubmit()">
+      <label for="cardNumber">Card Number:</label>
+      <input type="number" id="cardNumber" name="cardNumber" [(ngModel)]="tbl_bank.cardNumber" required>
+    
+      <label for="pin">PIN:</label>
+      <input type="number" id="pin" name="pin" [(ngModel)]="tbl_bank.pin" required>
+    
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" [(ngModel)]="tbl_bank.amount" required>
+    
+      
+      <div class="row">
+        <button type="submit">Submit</button>
+        
+        <button type="Exit">
+          <a routerLink="/services">Exit</a>
+        </button>
+       
+      </div>
+    </form>
+</html>
+
+
+

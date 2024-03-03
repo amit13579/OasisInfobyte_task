@@ -1,0 +1,65 @@
+<html>
+  <head>
+   
+    <title>Deposit</title>
+    <h1>DEPOSIT AMOUNT</h1>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      input {
+            width: 450px;
+            height: 50px;
+            margin-bottom: 20px;
+          }
+          button {
+            width: 200px;
+            height: 80px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 20px;
+          }
+        
+          a {
+            text-decoration: none;
+            color: white;
+          }
+    </style>
+  </head>
+  <body>
+<h1>Deposit Amount</h1>
+<form (ngSubmit)="onSubmit()">
+  <label for="cardNumber">Card Number:</label>
+  <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber" required>
+
+  <label for="pin">PIN:</label>
+  <input type="password" id="pin" name="pin" [(ngModel)]="pin" required>
+
+  <label for="amount">Amount:</label>
+  <input type="number" id="amount" name="amount" [(ngModel)]="amount" required>
+  <div class="row">
+    <button type="submit">Deposit</button>
+    <button type="Exit">
+      <a routerLink="/services">Exit</a>
+    </button>
+  </div>
+  
+</form>
+
+<div *ngIf="depositedAmount">
+  <h2>Amount deposited successfully:</h2>
+  <p>{{ depositedAmount }}</p>
+</div>
+
+<div *ngIf="errorMessage">
+  <h2>Error:</h2>
+  <p>{{ errorMessage }}</p>
+</div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Change pin</title>
+    <style>
+      form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+input {
+  width: 450px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+button {
+  width: 200px;
+  height: 80px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 20px;
+ 
+
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+    </style>
+    </head>
+    <body>   
+<h1>Change PIN</h1>
+
+<form >
+  <label for="cardNumber">Card Number:</label>
+  <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="cardNumber" required>
+
+  <label for="pin">PIN:</label>
+  <input type="password" id="pin" name="pin" [(ngModel)]="pin" required>
+
+  <label for="newPin">New PIN:</label>
+  <input type="password" id="newPin" name="newPin" [(ngModel)]="newPin" required>
+
+  <div class="row">
+    <button type="submit"  (click)="onSubmit()">Submit</button>
+    <button type="Exit">
+      <a routerLink="/services">Exit</a>
+    </button>
+   
+  </div>
+
+</form>
+
+<div *ngIf="changedPin">
+  <h2>PIN changed successfully:</h2>
+  <p>New PIN: {{ changedPin }}</p>     
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<html>
+  <head>
+   
+    <title>Get Card Details</title>
+    <h1>Get Card Details</h1>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      input {
+            width: 450px;
+            height: 50px;
+            margin-bottom: 20px;
+          }
+          button {
+            width: 200px;
+            height: 80px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 20px;
+          }
+        
+          a {
+            text-decoration: none;
+            color: white;
+          }
+      #cardDetails {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <form>
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" name="cardNumber"  [(ngModel)]="cardNumber" required>
+
+      <label for="pin">PIN:</label>
+      <input type="password" id="pin" name="pin" [(ngModel)]="pin" required>
+      <div class="row">
+        <button type="submit" (click)="getCardDetails()">Submit</button>
+        <button type="Exit">
+          <a routerLink="/services">Exit</a>
+        </button>
+      </div>
+      
+    </form>
+
+    <div *ngIf="cardDetails" id="cardDetails">
+      <h2>Card Details:</h2>
+      <p>Name: {{cardDetails.name}}</p>
+      <p>CVV: {{cardDetails.cvv}}</p>
+      <p>Card Number: {{cardDetails.cardNumber}}</p>
+    </div>
+  </body>
+</html>
+

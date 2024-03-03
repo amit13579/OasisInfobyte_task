@@ -1,0 +1,17 @@
+.top, .mid, .bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top button, .mid button, .bot button {
+  width: 200px;
+  height: 60px;
+  margin: 10px;
+}
+.bot button:first-child {
+  margin-right: auto;
+}
+
+.bot button:last-child {
+  margin-left: auto;
+}

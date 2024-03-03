@@ -1,0 +1,82 @@
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('../assets/images/newuser.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+      
+    }
+    .top, .mid, .bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+
+}
+.top button, .mid button, .bot button {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  font-size: 24px;
+}
+.bot button:first-child {
+  margin-right: auto;
+}
+
+.bot button:last-child {
+  margin-left: auto;
+}
+.top button:first-child {
+  margin-right: auto;
+}
+
+.top button:last-child {
+  margin-left: auto;
+}
+.mid button:first-child {
+  margin-right: auto;
+}
+
+.mid button:last-child {
+  margin-left: auto;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+  </style>
+</head>
+<body>
+    <h1>Welocme To Digital ATM please Use below Services</h1>
+
+<div class="top">    
+        <button mat-fab extended color="accent"> 
+            <a routerLink="/cardDetails">CARD DETAILS</a> 
+        </button> 
+        <button mat-fab extended color="accent"> 
+          <a routerLink="/withdraw">WITHDRAW</a> 
+        </button>    
+</div>
+<div class="mid">
+    <button mat-fab extended color="accent">
+    <a routerLink="/changePin">CHANGE PIN</a> 
+  </button> 
+    <button mat-fab extended color="accent">
+      <a routerLink="/deposite"> DEPOSITE</a>
+    </button>
+</div>
+<div class="bot">
+    <button mat-fab extended color="accent"> 
+        <a routerLink="">HOME</a>
+    </button> 
+    
+    <button mat-fab extended color="accent"> 
+      <a routerLink="/checkBalance">CHECK BALANCE</a>
+    </button>
+</div>
+
+</body>
+
